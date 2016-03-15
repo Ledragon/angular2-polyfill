@@ -1,6 +1,6 @@
 {
   "name": "angular2-polyfill",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "description": "Angular2 polyfill for Angular1",
   "license": "MIT",
   "repository": "SamVerschueren/angular2-polyfill",
@@ -12,22 +12,22 @@
   "main": false,
   "scripts": {
     "postinstall": "npm run typings install",
-    "prepublish": "npm run compile",
+    "prepublish": "npm run compile && gulp bundle",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "typings": "typings",
     "link": "jspm link npm:angular2-polyfill@dev -y"
   },
   "dependencies": {
-    "camelcase": "^2.0.1",
-    "dot-prop": "^2.2.0"
+    "camelcase": "^2.1.1",
+    "decamelize": "^1.2.0",
+    "dot-prop": "^2.4.0"
   },
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-typescript": "^2.12.1",
     "merge2": "^1.0.1",
-    "systemjs-builder": "^0.15.12",
+    "systemjs-builder": "^0.15.13",
     "typescript": "^1.7.5",
     "typings": "^0.6.8"
   }
